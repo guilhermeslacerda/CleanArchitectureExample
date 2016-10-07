@@ -80,7 +80,7 @@ public class SaleConsoleUI implements UI {
 		printLine("\nAmount \tUnit Price  \tSubtotal");
 		for(int i = 0; i < items.length; i++)                		
 			printLine("\n" + items[i].getAmount() + "\t" + items[i].getUnitPrice() 
-						+ "\t" + items[i].getSubTotal());
+						+ "\t\t" + items[i].getSubTotal());
 	}
 
 	private void quit() {
