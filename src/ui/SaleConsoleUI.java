@@ -40,15 +40,15 @@ public class SaleConsoleUI implements UI {
 		byte option = getOption();
 
 		try {
-				switch (option) {
-			    case OPTION_NEW_SALE: newSale();
-			        break;
-			    case OPTION_ADD_ITEM: addItemOnSale();
-			        break;
-			    case OPTION_SHOW_ITEMS: showItems();
-			        break;
-			    case OPTION_QUIT: quit();
-			        break;
+			switch (option) {
+			case OPTION_NEW_SALE: newSale();
+			    break;
+			case OPTION_ADD_ITEM: addItemOnSale();
+			    break;
+			case OPTION_SHOW_ITEMS: showItems();
+			    break;
+			case OPTION_QUIT: quit();
+			    break;
 			}
 		} catch (InvalidSaleException e) {
 			printLine(e.getMessage());
