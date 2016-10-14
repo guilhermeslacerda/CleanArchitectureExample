@@ -2,9 +2,9 @@ package ui;
 
 import java.util.Scanner;
 
+import domain.Item;
 import domain.exceptions.InvalidSaleException;
 import main.UI;
-import domain.Item;
 import services.SaleService;
 
 public class SaleConsoleUI implements UI {
@@ -47,7 +47,7 @@ public class SaleConsoleUI implements UI {
 			    break;
 			case OPTION_SHOW_ITEMS: showItems();
 			    break;
-			case OPTION_QUIT: quit();
+			case OPTION_QUIT: saveAndQuit();
 			    break;
 			}
 		} catch (InvalidSaleException e) {
@@ -83,7 +83,8 @@ public class SaleConsoleUI implements UI {
 						+ "\t\t" + items[i].getSubTotal());
 	}
 
-	private void quit() {
+	private void saveAndQuit() {
+		service.saveSale();
 		printLine("\n\nQuit Sale App!!\nThank you for using our app.");
 	}
 

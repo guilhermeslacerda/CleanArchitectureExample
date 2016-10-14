@@ -14,7 +14,7 @@ public class Bootstrapper {
 		ui.menu();
 	}
 
-	private static void definePersistence(DataRepository repository) {
+	public static void definePersistence(DataRepository repository) {
 		Bootstrapper.repository = repository;
 	}
 	
@@ -22,7 +22,7 @@ public class Bootstrapper {
 		return repository;
 	}
 
-	private static void defineUI(UI ui) {
+	public static void defineUI(UI ui) {
 		Bootstrapper.ui = ui;
 	}
 
