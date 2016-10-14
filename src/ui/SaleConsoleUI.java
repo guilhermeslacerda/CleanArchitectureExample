@@ -32,7 +32,7 @@ public class SaleConsoleUI implements UI {
 		printLine("\n[1] New Sale");
 		printLine("\n[2] Add item on sale");
 		printLine("\n[3] Show items");
-		printLine("\n[4] quit\n");
+		printLine("\n[4] Quit\n");
 		printLine("\nChoose your option: ");
 	}
 
@@ -59,7 +59,7 @@ public class SaleConsoleUI implements UI {
 
 	private byte getOption() {
 		in = new Scanner(System.in);
-        return in.nextByte();
+		return in.nextByte();
 	}
 
 	private void newSale() throws InvalidSaleException {
