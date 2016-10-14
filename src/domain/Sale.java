@@ -11,10 +11,10 @@ public class Sale {
 			throw new InvalidSaleException("You can't create a sale with number of negative items"); 
 		items = new Item[numItems];
 		itemsNumber = 0;
-		inicitialize();
+		initialize();
 	}
 
-	private void inicitialize() {
+	private void initialize() {
 		for (int i = 0; i < items.length; i++)
 			items[i] = new Item(0.0, 0.0);
 	}
