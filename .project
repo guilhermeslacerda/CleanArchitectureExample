@@ -6,12 +6,41 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
+			<name>org.eclipse.buildship.core.gradleprojectbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.atlassian.clover.eclipse.core.prejavabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
 			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.atlassian.clover.eclipse.core.postjavabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>ch.acanda.eclipse.pmd.builder.PMDBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>com.atlassian.clover.eclipse.core.clovernature</nature>
+		<nature>ch.acanda.eclipse.pmd.builder.PMDNature</nature>
+		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
 	</natures>
 </projectDescription>

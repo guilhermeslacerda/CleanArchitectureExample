@@ -7,7 +7,7 @@ import domain.DataRepository;
 import domain.Sale;
 
 public class InMemoryRepository implements DataRepository {
-	private List<Sale> sales = new ArrayList<Sale>();
+	private List<Sale> sales = new ArrayList<>();
 
 	@Override
 	public void addSale(Sale sale) {
