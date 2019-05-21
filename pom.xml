@@ -30,47 +30,27 @@
 	        <artifactId>maven-pmd-plugin</artifactId>
 	        <version>3.12.0</version>
       	</plugin>
-		
-		 <plugin>
-			<groupId>org.jacoco</groupId>
-			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.4</version>
-			<executions>
+	<plugin>
+		<groupId>org.jacoco</groupId>
+		<artifactId>jacoco-maven-plugin</artifactId>
+		<version>0.8.2</version>
+		<executions>
 			<execution>
-			<id>default-prepare-agent</id>
-			<goals>
-			<goal>prepare-agent</goal>
-			</goals>
+				<goals>
+					<goal>prepare-agent</goal>
+				</goals>
 			</execution>
+			<!-- attached to Maven test phase -->
 			<execution>
-			<id>default-report</id>
-			<goals>
-			<goal>report</goal>
-			</goals>
+				<id>report</id>
+				<phase>test</phase>
+				<goals>
+					<goal>report</goal>
+				</goals>
 			</execution>
-			<execution>
-			<id>default-check</id>
-			<goals>
-			<goal>check</goal>
-			</goals>
-			<configuration>
-			<rules>
-			<rule>
-			<element>BUNDLE</element>
-			<limits>
-			<limit>
-			<counter>COMPLEXITY</counter>
-			<value>COVEREDRATIO</value>
-			<minimum>0.60</minimum>
-			</limit>
-			</limits>
-			</rule>
-			</rules>
-			</configuration>
-			</execution>
-			</executions>
-		</plugin>
-    </plugins>
+		</executions>
+	</plugin>	
+	</plugins>
     
   </build>
   <reporting>
