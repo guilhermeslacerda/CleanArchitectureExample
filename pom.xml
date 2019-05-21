@@ -25,8 +25,70 @@
 			<useUnlimitedThreads>true</useUnlimitedThreads>
 			</configuration>
 		</plugin>
+		<plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-pmd-plugin</artifactId>
+	        <version>3.12.0</version>
+      	</plugin>
+		
+		 <plugin>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.4</version>
+			<executions>
+			<execution>
+			<id>default-prepare-agent</id>
+			<goals>
+			<goal>prepare-agent</goal>
+			</goals>
+			</execution>
+			<execution>
+			<id>default-report</id>
+			<goals>
+			<goal>report</goal>
+			</goals>
+			</execution>
+			<execution>
+			<id>default-check</id>
+			<goals>
+			<goal>check</goal>
+			</goals>
+			<configuration>
+			<rules>
+			<rule>
+			<element>BUNDLE</element>
+			<limits>
+			<limit>
+			<counter>COMPLEXITY</counter>
+			<value>COVEREDRATIO</value>
+			<minimum>0.60</minimum>
+			</limit>
+			</limits>
+			</rule>
+			</rules>
+			</configuration>
+			</execution>
+			</executions>
+		</plugin>
     </plugins>
+    
   </build>
+  <reporting>
+		<plugins>
+		<plugin>
+		   <groupId>org.apache.maven.plugins</groupId>
+		   <artifactId>maven-checkstyle-plugin</artifactId>
+		   <version>3.0.0</version>
+           <reportSets>
+            <reportSet>
+              <reports>
+                <report>checkstyle</report>
+              </reports>
+            </reportSet>
+          </reportSets>
+		 </plugin>
+		 </plugins>
+		 </reporting>
   <dependencies>
   	<dependency>
   		<groupId>junit</groupId>
@@ -34,5 +96,11 @@
   		<version>4.13-beta-2</version>
   		<scope>test</scope>
   	</dependency>
+  	<dependency>
+	    <groupId>org.jacoco</groupId>
+	    <artifactId>jacoco-maven-plugin</artifactId>
+    	<version>0.8.4</version>
+	</dependency>
   </dependencies>
+  
 </project>
